@@ -1,111 +1,198 @@
 <!DOCTYPE html>
-  <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Economize +</title>
-    <style>
-    
-      /* Estilos CSS para o layout */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: justify; /* Novo estilo para justificar o texto */
-      }
+<html lang="pt-br">
 
-      header {
-        background-color: #000000; /* Cor preta */
-        padding: 20px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Economize +</title>
+ 
+<style>
+  /* Estilos CSS para o layout geral */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+  }
 
-      header .site-title h1 {
-        color: #adadad; /* Cor branca */
-        margin: 0;
-      }
+  header {
+    background-color: #111; /* Cor de fundo mais escura */
+    padding: 20px;
+    text-align: center;
+  }
 
-      nav ul {
-        list-style: none;
-        padding: 20px;
-        margin: 0;
-      }
+  header .site-title img {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
 
-      nav ul li {
-        display: inline;
-        margin-right: 10px;
-      }
+  header .site-title h1 {
+    color: #fff; /* Cor branca */
+    margin: 0;
+    font-size: 32px; /* Tamanho da fonte aumentado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+    display: inline-block;
+  }
 
-      nav ul li a {
-        color: #c0c0c0; /* Cor branca */
-        text-decoration: none;
-      }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #444; /* Cor de fundo para a navegação */
+    text-align: center;
+    margin-top: 10px;
+  }
 
-      .spending-topic {
-        margin-top: 20px;
-        padding: 20px;
-        background-color: #cecece; /* Cor de fundo cinza claro */
-      }
+  nav ul li {
+    display: inline;
+    margin-right: 15px; /* Espaçamento maior entre os itens de navegação */
+  }
 
-      .spending-topic h2 {
-        color: #000000; /* Cor preta */
-        margin-top: 0;
-      }
-      .form-group {
-        margin-bottom: 10px;
-      }
+  nav ul li a {
+    color: #fff; /* Cor branca */
+    text-decoration: none;
+    font-size: 18px; /* Tamanho da fonte aumentado */
+    padding: 5px 10px;
+    border-radius: 5px; /* Cantos arredondados nos links */
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo ao passar o mouse */
+  }
 
-      #result {
-        margin-top: 10px;
-        font-weight: bold;
-        color: #000000; /* Cor preta */
-      }
+  nav ul li a:hover {
+    background-color: #555; /* Cor de fundo escura ao passar o mouse */
+  }
 
-      /* Estilos CSS adicionais */
-      .spending-topic ul {
-        margin-top: 10px;
-      }
+  .spending-topic {
+    margin-top: 30px; /* Espaçamento maior entre os tópicos */
+    padding: 20px;
+    background-color: #222; /* Cor de fundo all black */
+    border: 1px solid #444; /* Adiciona uma borda suave */
+    border-radius: 10px; /* Cantos arredondados maiores */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra na caixa */
+  }
 
-      .spending-topic li {
-        margin-bottom: 10px;
-      }
+  .spending-topic h2 {
+    color: #fff; /* Cor branca */
+    margin-top: 0;
+    font-size: 28px; /* Tamanho da fonte aumentado */
+    border-bottom: 2px solid #fff; /* Linha de borda na parte inferior dos títulos */
+    padding-bottom: 10px; /* Espaçamento inferior para o título */
+  }
 
-      .spending-topic li strong {
-        color: #000000; /* Cor azul escuro para destacar as porcentagens */
-      }
+  .spending-topic p {
+    line-height: 1.8; /* Espaçamento entre linhas maior */
+  }
 
-      /* Estilos personalizados */
-      #income-form label,
-      #result h3,
-      #result ul {
-        color: #ffffff; /* Cor preta */
-      }
-      style>
-  /* Estilos CSS para o layout */
+  /* Estilos personalizados */
+  #income-form label,
+  #result h3,
+  #result ul {
+    color: #fff; /* Cor branca */
+  }
 
+  /* Estilos para links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilos para o rodapé */
+  footer {
+    background-color: #111;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px; /* Espaçamento maior entre o conteúdo e o rodapé */
+  }
+
+  footer p {
+    margin: 10px 0; /* Espaçamento maior entre os parágrafos do rodapé */
+  }
+
+  /* Media Queries para responsividade */
+  @media screen and (max-width: 768px) {
+    /* Estilos para dispositivos com largura máxima de 768px (tablets e smartphones em modo paisagem) */
+    header .site-title h1 {
+      font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
+    }
+
+    nav ul li {
+      margin-right: 10px; /* Reduzir o espaçamento entre os itens de navegação */
+    }
+
+    nav ul li a {
+      font-size: 16px; /* Reduzir o tamanho da fonte dos links */
+      padding: 3px 8px; /* Reduzir o preenchimento dos links */
+    }
+
+    .spending-topic {
+      margin-top: 20px; /* Reduzir o espaçamento entre os tópicos */
+      padding: 15px; /* Reduzir o preenchimento das caixas de tópicos */
+    }
+
+    .spending-topic h2 {
+      font-size: 24px; /* Reduzir o tamanho da fonte dos títulos */
+    }
+
+    /* Mais ajustes conforme necessário para acomodar melhor os dispositivos móveis */
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Estilos para dispositivos com largura máxima de 480px (smartphones em modo retrato) */
+    header .site-title h1 {
+      font-size: 20px; /* Reduzir ainda mais o tamanho da fonte para telas pequenas */
+    }
+
+    nav ul li {
+      margin-right: 5px; /* Reduzir ainda mais o espaçamento entre os itens de navegação */
+    }
+
+    nav ul li a {
+      font-size: 14px; /* Reduzir ainda mais o tamanho da fonte dos links */
+      padding: 2px 6px; /* Reduzir ainda mais o preenchimento dos links */
+    }
+
+    .spending-topic {
+      margin-top: 15px; /* Reduzir ainda mais o espaçamento entre os tópicos */
+      padding: 10px; /* Reduzir ainda mais o preenchimento das caixas de tópicos */
+    }
+
+    .spending-topic h2 {
+      font-size: 20px; /* Reduzir ainda mais o tamanho da fonte dos títulos */
+    }
+
+    /* Mais ajustes conforme necessário para dispositivos móveis menores */
+  }
 </style>
 
-  </head>
-  <body>
-    <header>
-      <div class="site-title">
-        <img src="LOGO TA.jpeg" alt="" width="60" height="60">  
-        <h1>Economize ++</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#financial-awareness">O que é consciência financeira?</a></li>
-          <li><a href="#importance">A Importância da Divisão Adequada do Dinheiro</a></li>
-          <li><a href="#expense-allocation">Planejamento Financeiro Pessoal</a></li>
 
-          <a href="Pagina 2.html">Calcule seus gastos</a>
-        </ul>
-      </nav>
-    </header>
+</head>
+
+<body>
+  <header>
+    <div class="site-title">
+      <img src="LOGO TA.jpeg" alt="" width="60" height="60">  
+      <h1>Economize +</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#financial-awareness">O que é consciência financeira?</a></li>
+        <li><a href="#importance">A Importância da Divisão Adequada do Dinheiro</a></li>
+        <li><a href="#expense-allocation">Planejamento Financeiro Pessoal</a></li>
+
+        <a href="Pagina 2.html">Calcule seus gastos</a>
+      </ul>
+    </nav>
+  </header>
 
 
+  <main>
     <section id="financial-awareness" class="spending-topic">
-    
-
       <h2>O que é consciência financeira?</h2>
       <p>A consciência financeira refere-se à capacidade de compreender, gerenciar e tomar decisões informadas sobre as finanças pessoais. Envolve uma compreensão clara dos princípios básicos de economia, orçamento, poupança, investimento, endividamento, consumo consciente e planejamento financeiro a longo prazo. Ter consciência financeira significa estar ciente das suas finanças, saber como elas funcionam e tomar decisões conscientes e responsáveis em relação ao dinheiro.</p>
 
@@ -117,8 +204,8 @@
       <p>Além disso, a consciência financeira também está relacionada a uma mentalidade saudável em relação ao dinheiro. Isso significa ter uma atitude positiva em relação ao dinheiro e evitar comportamentos prejudiciais, como a ganância excessiva, a impulsividade financeira ou a negligência em relação às finanças pessoais.</p>
 
       <p2>Em suma, a consciência financeira é a combinação de conhecimento, habilidades e atitudes que permitem que uma pessoa tome decisões financeiras informadas e responsáveis, estabeleça metas financeiras realistas e trabalhe para alcançá-las ao longo do tempo. É um elemento essencial para a saúde financeira e o bem-estar geral de um indivíduo.</p2>
-
     </section>
+
     <section id="importance" class="spending-topic">
       <h2>A Importância da Divisão Adequada do Dinheiro</h2>
       <p>A forma como dividimos nosso dinheiro pode ter um impacto significativo em nossa saúde financeira geral. Ao adotar uma abordagem adequada de divisão de gastos, podemos alcançar os seguintes benefícios:</p>
@@ -131,8 +218,8 @@
         <li><strong>Bem-estar e Qualidade de Vida:</strong> Alocar recursos para atividades de lazer e qualidade de vida nos permite desfrutar da vida, manter um equilíbrio saudável entre trabalho e lazer, e garantir que estamos cuidando de nosso bem-estar físico e emocional.</li>
       </ul>
       <p>Ao adotar essa divisão adequada do dinheiro, estamos construindo uma base sólida para nossa estabilidade financeira e nos colocando em um caminho de crescimento e prosperidade a longo prazo.</p>
-
     </section>
+
     <section id="expense-allocation" class="spending-topic">
       <h2>Planejamento Financeiro Pessoal: Alocação de Despesas</h2>
       <p>Ao adotar uma divisão adequada do dinheiro, podemos direcionar nossos recursos para diferentes categorias de gastos, garantindo uma gestão financeira mais equilibrada. A seguir, estão algumas sugestões de alocação de despesas com base nas porcentagens recomendadas:</p>
@@ -164,6 +251,7 @@
         <li>Contribuições para aposentadoria (fundos de pensão, planos de previdência privada)</li>
         <li>Investimentos em ações, títulos ou fundos mútuos</li>
         <li>Construção de patrimônio a longo prazo</li>
+      </ul>
 
       <h3>Educação e Desenvolvimento (5%):</h3>
       <ul>
@@ -178,23 +266,31 @@
         <li>Atividades recreativas</li>
         <li>Hobbies e entretenimento</li>
       </ul>
-
     </section>
-  </script>
-  
-  
-  <footer>
-    
-    <h3>Quem somos?</h3>
-    <p>O Economize + é uma plataforma dedicada a promover a consciência financeira e auxiliar as</p>
-    <p>pessoas na gestão de suas finanças pessoais. Sua equipe busca fornecer informações, dicas </p>
-    <p>e recursos práticos para ajudar os usuários a entender melhor suas finanças, tomar</p>
-    <p>decisões informadas e alcançar suas metas financeiras.</p>
 
+    <section id="tips-to-save-money" class="spending-topic">
+      <h2>Dicas para Economizar</h2>
+      <p>Economizar dinheiro é fundamental para manter uma vida financeiramente saudável e alcançar suas metas financeiras. Aqui estão algumas dicas práticas para ajudar você a economizar e fazer o melhor uso do seu dinheiro:</p>
+      <ul>
+        <li><strong>Crie um orçamento:</strong> Estabeleça um orçamento mensal que reflita suas receitas e despesas. Isso ajudará você a ter uma visão clara das suas finanças e permitirá que você identifique áreas em que pode reduzir gastos desnecessários.</li>
+        <li><strong>Pague-se primeiro:</strong> Assim que receber seu salário, reserve uma porcentagem para economizar ou investir antes de pagar outras contas. Essa prática ajuda a construir uma reserva de emergência e impede que o dinheiro seja gasto desnecessariamente.</li>
+        <li><strong>Compare preços:</strong> Antes de fazer uma compra significativa, compare preços em diferentes lojas ou sites. Essa simples ação pode ajudar você a encontrar melhores ofertas e economizar dinheiro.</li>
+        <li><strong>Evite compras por impulso:</strong> Reflita antes de fazer compras não planejadas. Pergunte-se se o item é realmente necessário e se cabe no seu orçamento. Compras impulsivas podem levar a gastos desnecessários.</li>
+        <li><strong>Reduza gastos recorrentes:</strong> Analise seus gastos mensais e procure maneiras de economizar em contas recorrentes, como pacotes de TV e internet, assinaturas de serviços e contas de energia.</li>
+        <li><strong>Prepare refeições em casa:</strong> Comer fora com frequência pode ser caro. Cozinhe em casa e leve marmitas para o trabalho ou escola. Isso não só economiza dinheiro, mas também é uma opção mais saudável.</li>
+        <li><strong>Economize em energia:</strong> Desligue aparelhos eletrônicos quando não estiverem em uso, troque lâmpadas por opções mais econômicas e considere o uso de energia solar para reduzir a conta de luz.</li>
+        <li><strong>Economize em transporte:</strong> Considere opções de transporte mais econômicas, como o uso de transporte público, caronas compartilhadas ou bicicletas, em vez de depender exclusivamente de veículos particulares.</li>
+        <li><strong>Aproveite promoções e descontos:</strong> Esteja atento a promoções, descontos e cupons em lojas e sites. Planeje suas compras para aproveitar essas ofertas e economizar dinheiro.</li>
+        <li><strong>Invista em educação financeira:</strong> Aprenda mais sobre finanças pessoais, investimentos e planejamento financeiro. Quanto mais você souber sobre o assunto, melhores serão suas decisões financeiras.</li>
+      </ul>
+      <p>Lembre-se de que economizar dinheiro não significa privar-se de tudo. Trata-se de fazer escolhas conscientes e equilibradas para alcançar seus objetivos financeiros e desfrutar de uma vida financeiramente estável e satisfatória.</p>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Quem somos?</h3>
+    <p>O Economize + é uma plataforma dedicada a promover a consciência financeira e auxiliar as pessoas na gestão de suas finanças pessoais. Sua equipe busca fornecer informações, dicas e recursos práticos para ajudar os usuários a entender melhor suas finanças, tomar decisões informadas e alcançar suas metas financeiras.</p>
     <p>© Economize + 2023. Todos os direitos reservados.</p>
   </footer>
-  
 </body>
-  </html>
-</body>
-  </html>
+</html>
