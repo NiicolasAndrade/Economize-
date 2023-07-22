@@ -8,266 +8,275 @@
  
 <style>
   /* Estilos CSS para o layout geral */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-color: #000;
-    line-height: 1.6;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
 
-  header {
-    background-color: #111; /* Cor de fundo mais escura */
-    padding: 20px;
-    text-align: center;
-  }
+header {
+  background-color: #111; /* Cor de fundo mais escura */
+  padding: 20px;
+  text-align: center;
+}
 
-  header .site-title img {
-    vertical-align: middle;
-    margin-right: 10px;
-  }
+header .site-title img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
 
+header .site-title h1 {
+  color: #fff; /* Cor branca */
+  margin: 0;
+  font-size: 32px; /* Tamanho da fonte aumentado */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+  display: inline-block;
+  /* Animação do título do site */
+  animation: bounceIn 1s;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #444; /* Cor de fundo para a navegação */
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px; /* Espaçamento maior entre os itens de navegação */
+}
+
+nav ul li a {
+  color: #fff; /* Cor branca */
+  text-decoration: none;
+  font-size: 18px; /* Tamanho da fonte aumentado */
+  padding: 5px 10px;
+  border-radius: 5px; /* Cantos arredondados nos links */
+  transition: background-color 0.3s ease; /* Transição suave na cor de fundo ao passar o mouse */
+}
+
+nav ul li a:hover {
+  background-color: #555; /* Cor de fundo escura ao passar o mouse */
+}
+
+main {
+  width: 100%;
+  max-width: 1200px; /* Largura máxima para o conteúdo centralizado */
+  padding: 0 15px; /* Adiciona espaço nas laterais */
+}
+
+.spending-topic {
+  margin-top: 30px; /* Espaçamento maior entre os tópicos */
+  padding: 20px;
+  background-color: #222; /* Cor de fundo all black */
+  border: 1px solid #444; /* Adiciona uma borda suave */
+  border-radius: 10px; /* Cantos arredondados maiores */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra na caixa */
+  /* Animação de fade-in nas seções */
+  animation: fadeIn 1s;
+}
+
+.spending-topic h2 {
+  color: #fff; /* Cor branca */
+  margin-top: 0;
+  font-size: 28px; /* Tamanho da fonte aumentado */
+  border-bottom: 2px solid #fff; /* Linha de borda na parte inferior dos títulos */
+  padding-bottom: 10px; /* Espaçamento inferior para o título */
+}
+
+.spending-topic p {
+  line-height: 1.8; /* Espaçamento entre linhas maior */
+}
+
+/* Estilos personalizados */
+#income-form label,
+#result h3,
+#result ul {
+  color: #fff; /* Cor branca */
+}
+
+/* Estilos para links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #111;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px; /* Espaçamento maior entre o conteúdo e o rodapé */
+}
+
+footer p {
+  margin: 10px 0; /* Espaçamento maior entre os parágrafos do rodapé */
+}
+
+/* Media Queries para responsividade */
+@media screen and (max-width: 768px) {
+  /* Estilos para dispositivos com largura máxima de 768px (tablets e smartphones em modo paisagem) */
   header .site-title h1 {
-    color: #fff; /* Cor branca */
-    margin: 0;
-    font-size: 32px; /* Tamanho da fonte aumentado */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
-    display: inline-block;
-    /* Animação do título do site */
-    animation: bounceIn 1s;
-  }
-
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #444; /* Cor de fundo para a navegação */
-    text-align: center;
-    margin-top: 10px;
+    font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
   }
 
   nav ul li {
-    display: inline;
-    margin-right: 15px; /* Espaçamento maior entre os itens de navegação */
+    margin-right: 10px; /* Reduzir o espaçamento entre os itens de navegação */
   }
 
   nav ul li a {
-    color: #fff; /* Cor branca */
-    text-decoration: none;
-    font-size: 18px; /* Tamanho da fonte aumentado */
-    padding: 5px 10px;
-    border-radius: 5px; /* Cantos arredondados nos links */
-    transition: background-color 0.3s ease; /* Transição suave na cor de fundo ao passar o mouse */
-  }
-
-  nav ul li a:hover {
-    background-color: #555; /* Cor de fundo escura ao passar o mouse */
+    font-size: 16px; /* Reduzir o tamanho da fonte dos links */
+    padding: 3px 8px; /* Reduzir o preenchimento dos links */
   }
 
   .spending-topic {
-    margin-top: 30px; /* Espaçamento maior entre os tópicos */
-    padding: 20px;
-    background-color: #222; /* Cor de fundo all black */
-    border: 1px solid #444; /* Adiciona uma borda suave */
-    border-radius: 10px; /* Cantos arredondados maiores */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra na caixa */
-    /* Animação de fade-in nas seções */
-    animation: fadeIn 1s;
+    margin-top: 20px; /* Reduzir o espaçamento entre os tópicos */
+    padding: 15px; /* Reduzir o preenchimento das caixas de tópicos */
   }
 
   .spending-topic h2 {
-    color: #fff; /* Cor branca */
-    margin-top: 0;
-    font-size: 28px; /* Tamanho da fonte aumentado */
-    border-bottom: 2px solid #fff; /* Linha de borda na parte inferior dos títulos */
-    padding-bottom: 10px; /* Espaçamento inferior para o título */
+    font-size: 24px; /* Reduzir o tamanho da fonte dos títulos */
   }
 
-  .spending-topic p {
-    line-height: 1.8; /* Espaçamento entre linhas maior */
-  }
+  /* Mais ajustes conforme necessário para acomodar melhor os dispositivos móveis */
+}
 
-  /* Estilos personalizados */
-  #income-form label,
-  #result h3,
-  #result ul {
-    color: #fff; /* Cor branca */
-  }
-
-  /* Estilos para links */
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* Estilos para o rodapé */
-  footer {
-    background-color: #111;
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-    margin-top: 30px; /* Espaçamento maior entre o conteúdo e o rodapé */
-  }
-
-  footer p {
-    margin: 10px 0; /* Espaçamento maior entre os parágrafos do rodapé */
-  }
-
-  /* Media Queries para responsividade */
-  @media screen and (max-width: 768px) {
-    /* Estilos para dispositivos com largura máxima de 768px (tablets e smartphones em modo paisagem) */
-    header .site-title h1 {
-      font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
-    }
-
-    nav ul li {
-      margin-right: 10px; /* Reduzir o espaçamento entre os itens de navegação */
-    }
-
-    nav ul li a {
-      font-size: 16px; /* Reduzir o tamanho da fonte dos links */
-      padding: 3px 8px; /* Reduzir o preenchimento dos links */
-    }
-
-    .spending-topic {
-      margin-top: 20px; /* Reduzir o espaçamento entre os tópicos */
-      padding: 15px; /* Reduzir o preenchimento das caixas de tópicos */
-    }
-
-    .spending-topic h2 {
-      font-size: 24px; /* Reduzir o tamanho da fonte dos títulos */
-    }
-
-    /* Mais ajustes conforme necessário para acomodar melhor os dispositivos móveis */
-  }
-
-  @media screen and (max-width: 480px) {
-    /* Estilos para dispositivos com largura máxima de 480px (smartphones em modo retrato) */
-    header .site-title h1 {
-      font-size: 20px; /* Reduzir ainda mais o tamanho da fonte para telas pequenas */
-    }
-
-    nav ul li {
-      margin-right: 5px; /* Reduzir ainda mais o espaçamento entre os itens de navegação */
-    }
-
-    nav ul li a {
-      font-size: 14px; /* Reduzir ainda mais o tamanho da fonte dos links */
-      padding: 2px 6px; /* Reduzir ainda mais o preenchimento dos links */
-    }
-
-    .spending-topic {
-      margin-top: 15px; /* Reduzir ainda mais o espaçamento entre os tópicos */
-      padding: 10px; /* Reduzir ainda mais o preenchimento das caixas de tópicos */
-    }
-
-    .spending-topic h2 {
-      font-size: 20px; /* Reduzir ainda mais o tamanho da fonte dos títulos */
-    }
-
-    /* Mais ajustes conforme necessário para dispositivos móveis menores */
-  }
-
-  /* Animação do título do site */
-  @keyframes bounceIn {
-    0% {
-      transform: translateY(-100%);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
-
+@media screen and (max-width: 480px) {
+  /* Estilos para dispositivos com largura máxima de 480px (smartphones em modo retrato) */
   header .site-title h1 {
-    animation: bounceIn 1s;
+    font-size: 20px; /* Reduzir ainda mais o tamanho da fonte para telas pequenas */
   }
 
-  /* Animação de fade-in nas seções */
+  nav ul li {
+    margin-right: 5px; /* Reduzir ainda mais o espaçamento entre os itens de navegação */
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Reduzir ainda mais o tamanho da fonte dos links */
+    padding: 2px 6px; /* Reduzir ainda mais o preenchimento dos links */
+  }
+
   .spending-topic {
-    animation: fadeIn 1s;
+    margin-top: 15px; /* Reduzir ainda mais o espaçamento entre os tópicos */
+    padding: 10px; /* Reduzir ainda mais o preenchimento das caixas de tópicos */
   }
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+  .spending-topic h2 {
+    font-size: 20px; /* Reduzir ainda mais o tamanho da fonte dos títulos */
   }
 
-  /* Animação de slide-up nos itens da lista */
-  .spending-topic ul li {
-    position: relative;
-    animation: slideUp 0.6s;
+  /* Mais ajustes conforme necessário para dispositivos móveis menores */
+}
+
+/* Animação do título do site */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100%);
   }
 
-  @keyframes slideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
+  100% {
+    transform: translateY(0);
+  }
+}
 
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+header .site-title h1 {
+  animation: bounceIn 1s;
+}
+
+/* Animação de fade-in nas seções */
+.spending-topic {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
-  /* Animação de destaque no rodapé */
-  footer h3 {
-    animation: pulse 2s infinite;
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animação de slide-up nos itens da lista */
+.spending-topic ul li {
+  position: relative;
+  animation: slideUp 0.6s;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    50% {
-      transform: scale(1.1);
-    }
+/* Animação de destaque no rodapé */
+footer h3 {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
 
-  /* Animação de fade-out */
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
-    100% {
-      opacity: 0;
-    }
+/* Animação de fade-out */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
 
-  /* Animação de spin */
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
+  100% {
+    opacity: 0;
+  }
+}
 
-    100% {
-      transform: rotate(360deg);
-    }
+/* Animação de spin */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
 
-  /* Aplica a animação de fade-out a um elemento específico */
-  .fade-out-element {
-    animation: fadeOut 1s;
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  /* Aplica a animação de spin a um elemento específico */
-  .spin-element {
-    animation: spin 2s linear infinite;
-  }
+/* Aplica a animação de fade-out a um elemento específico */
+.fade-out-element {
+  animation: fadeOut 1s;
+}
 
+/* Aplica a animação de spin a um elemento específico */
+.spin-element {
+  animation: spin 2s linear infinite;
+}
+  
 </style>
 
 
