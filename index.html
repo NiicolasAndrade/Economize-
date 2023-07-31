@@ -22,7 +22,7 @@ body {
 
 header {
   background-color: #000; /* Cor de fundo mais escura */
-  padding: 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -34,7 +34,7 @@ header .site-title img {
 header .site-title h1 {
   color: #fff; /* Cor branca */
   margin: 0;
-  font-size: 32px; /* Tamanho da fonte aumentado */
+  font-size: 28px; /* Tamanho da fonte aumentado */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
   display: inline-block;
   /* Animação do título do site */
@@ -195,87 +195,7 @@ footer p {
 
 header .site-title h1 {
   animation: bounceIn 1s;
-}
 
-/* Animação de fade-in nas seções */
-.spending-topic {
-  animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Animação de slide-up nos itens da lista */
-.spending-topic ul li {
-  position: relative;
-  animation: slideUp 0.6s;
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animação de destaque no rodapé */
-footer h3 {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-/* Animação de fade-out */
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Animação de spin */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Aplica a animação de fade-out a um elemento específico */
-.fade-out-element {
-  animation: fadeOut 1s;
-}
-
-/* Aplica a animação de spin a um elemento específico */
-.spin-element {
-  animation: spin 2s linear infinite;
-}
   
 </style>
 
