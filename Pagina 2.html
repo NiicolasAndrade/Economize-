@@ -5,23 +5,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #000000; /* Fundo preto */
+            color: #ffffff; /* Texto branco */
             margin: 0;
             padding: 20px;
         }
 
         h1 {
             text-align: center;
-            color: #000000;
+            color: #ffffff; /* Título em branco */
         }
 
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #ffffff;
+            background-color: #000000; /* Fundo preto */
             border-radius: 5px;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra branca */
         }
 
         .form-group {
@@ -38,7 +39,7 @@
             width: 100%;
             padding: 8px;
             border-radius: 4px;
-            border: 1px solid #ccc;
+            border: 1px solid #ffffff; /* Borda branca */
         }
 
         .button-container {
@@ -68,16 +69,15 @@
 
         th, td {
             padding: 8px;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #ffffff; /* Borda branca */
             text-align: left;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #000000;
         }
     </style>
     <script>
-        
         function calcularDivisao() {
             var ganhoMensal = parseFloat(document.getElementById("ganhoMensal").value);
             var necessidadesPorcentagem = parseFloat(document.getElementById("necessidadesPorcentagem").value);
@@ -101,71 +101,6 @@
             document.getElementById("educacaoDesenvolvimento").textContent = educacaoDesenvolvimento.toFixed(2);
             document.getElementById("lazerQualidadeVida").textContent = lazerQualidadeVida.toFixed(2);
         }
-
-        
-        function abrirPlanilha() {
-            var ganhoMensal = parseFloat(document.getElementById("ganhoMensal").value);
-            var necessidadesPorcentagem = parseFloat(document.getElementById("necessidadesPorcentagem").value);
-            var poupancaPorcentagem = parseFloat(document.getElementById("poupancaPorcentagem").value);
-            var dividasPorcentagem = parseFloat(document.getElementById("dividasPorcentagem").value);
-            var investimentosPorcentagem = parseFloat(document.getElementById("investimentosPorcentagem").value);
-            var educacaoPorcentagem = parseFloat(document.getElementById("educacaoPorcentagem").value);
-            var lazerPorcentagem = parseFloat(document.getElementById("lazerPorcentagem").value);
-
-            var popUpWindow = window.open("", "_blank", "width=600,height=400");
-            var popUpContent = `
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Planilha de Divisão de Gastos</title>
-                    <style>
-                        /* Estilos como antes (mesmo conteúdo) */
-                        /* ... */
-                    </style>
-                </head>
-                <body>
-                    <div class="container">
-                        <h1>Planilha de Divisão de Gastos</h1>
-                        <table>
-                            <tr>
-                                <th>Categoria</th>
-                                <th>Valor</th>
-                            </tr>
-                            <tr>
-                                <td>Necessidades Básicas:</td>
-                                <td>${(ganhoMensal * (necessidadesPorcentagem / 100)).toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td>Poupança de Emergência:</td>
-                                <td>${(ganhoMensal * (poupancaPorcentagem / 100)).toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td>Pagamento de Dívidas:</td>
-                                <td>${(ganhoMensal * (dividasPorcentagem / 100)).toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td>Investimentos de Longo Prazo:</td>
-                                <td>${(ganhoMensal * (investimentosPorcentagem / 100)).toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td>Educação e Desenvolvimento:</td>
-                                <td>${(ganhoMensal * (educacaoPorcentagem / 100)).toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td>Lazer e Qualidade de Vida:</td>
-                                <td>${(ganhoMensal * (lazerPorcentagem / 100)).toFixed(2)}</td>
-                            </tr>
-                        </table>
-                    </div>
-                </body>
-                </html>
-            `;
-            popUpWindow.document.open();
-            popUpWindow.document.write(popUpContent);
-            popUpWindow.document.close();
-        }
-
-        
     </script>
 </head>
 <body>
@@ -208,7 +143,7 @@
 
         <div class="button-container">
             <button onclick="calcularDivisao()">Calcular Divisão</button>
-            <button onclick="abrirPlanilha()">Abrir Planilha</button>
+            <!-- Botão "Abrir Planilha" removido -->
         </div>
 
         <table>
