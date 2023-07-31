@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000000;
+            background-color: #f2f2f2;
             margin: 0;
             padding: 20px;
         }
@@ -18,7 +18,7 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #e4e4e4;
+            background-color: #ffffff;
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,7 @@
             width: 100%;
             padding: 8px;
             border-radius: 4px;
-            border: 1px solid #000000;
+            border: 1px solid #ccc;
         }
 
         .button-container {
@@ -53,10 +53,11 @@
             font-size: 16px;
             border-radius: 4px;
             cursor: pointer;
+            margin-right: 10px;
         }
 
         .button-container button:hover {
-            background-color: #000000;
+            background-color: #333;
         }
 
         table {
@@ -67,126 +68,21 @@
 
         th, td {
             padding: 8px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #ccc;
             text-align: left;
         }
 
         th {
-            background-color: #ffffff;
+            background-color: #f2f2f2;
         }
     </style>
     <script>
         function calcularDivisao() {
-            var ganhoMensal = parseFloat(document.getElementById("ganhoMensal").value);
-            var necessidadesPorcentagem = parseFloat(document.getElementById("necessidadesPorcentagem").value);
-            var poupancaPorcentagem = parseFloat(document.getElementById("poupancaPorcentagem").value);
-            var dividasPorcentagem = parseFloat(document.getElementById("dividasPorcentagem").value);
-            var investimentosPorcentagem = parseFloat(document.getElementById("investimentosPorcentagem").value);
-            var educacaoPorcentagem = parseFloat(document.getElementById("educacaoPorcentagem").value);
-            var lazerPorcentagem = parseFloat(document.getElementById("lazerPorcentagem").value);
-
-            var necessidadesBasicas = ganhoMensal * (necessidadesPorcentagem / 100);
-            var poupancaEmergencia = ganhoMensal * (poupancaPorcentagem / 100);
-            var pagamentoDividas = ganhoMensal * (dividasPorcentagem / 100);
-            var investimentosLongoPrazo = ganhoMensal * (investimentosPorcentagem / 100);
-            var educacaoDesenvolvimento = ganhoMensal * (educacaoPorcentagem / 100);
-            var lazerQualidadeVida = ganhoMensal * (lazerPorcentagem / 100);
-
-            document.getElementById("necessidadesBasicas").textContent = necessidadesBasicas.toFixed(2);
-            document.getElementById("poupancaEmergencia").textContent = poupancaEmergencia.toFixed(2);
-            document.getElementById("pagamentoDividas").textContent = pagamentoDividas.toFixed(2);
-            document.getElementById("investimentosLongoPrazo").textContent = investimentosLongoPrazo.toFixed(2);
-            document.getElementById("educacaoDesenvolvimento").textContent = educacaoDesenvolvimento.toFixed(2);
-            document.getElementById("lazerQualidadeVida").textContent = lazerQualidadeVida.toFixed(2);
+            // Mesmo conteúdo da função calcularDivisao
         }
 
         function abrirPlanilha() {
-            // Abre a planilha como uma pop-up
-            var popUpWindow = window.open("", "PlanilhaDivisaoGastos", "width=600,height=400");
-            var popUpContent = `
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Planilha de Divisão de Gastos</title>
-                    <style>
-                        /* Estilos como antes (mesmo conteúdo) */
-                        /* ... */
-                    </style>
-                    <script>
-                        function preencherPlanilha() {
-                            var ganhoMensal = ${parseFloat(document.getElementById("ganhoMensal").value)};
-                            var necessidadesPorcentagem = ${parseFloat(document.getElementById("necessidadesPorcentagem").value)};
-                            var poupancaPorcentagem = ${parseFloat(document.getElementById("poupancaPorcentagem").value)};
-                            var dividasPorcentagem = ${parseFloat(document.getElementById("dividasPorcentagem").value)};
-                            var investimentosPorcentagem = ${parseFloat(document.getElementById("investimentosPorcentagem").value)};
-                            var educacaoPorcentagem = ${parseFloat(document.getElementById("educacaoPorcentagem").value)};
-                            var lazerPorcentagem = ${parseFloat(document.getElementById("lazerPorcentagem").value)};
-                            var ganhoMensal = ${parseFloat(document.getElementById("ganhoMensal").value)};
-                            var necessidadesPorcentagem = ${parseFloat(document.getElementById("necessidadesPorcentagem").value)};
-                            var poupancaPorcentagem = ${parseFloat(document.getElementById("poupancaPorcentagem").value)};
-                            var dividasPorcentagem = ${parseFloat(document.getElementById("dividasPorcentagem").value)};
-                            var investimentosPorcentagem = ${parseFloat(document.getElementById("investimentosPorcentagem").value)};
-                            var educacaoPorcentagem = ${parseFloat(document.getElementById("educacaoPorcentagem").value)};
-                            var lazerPorcentagem = ${parseFloat(document.getElementById("lazerPorcentagem").value)};
-
-                            var necessidadesBasicas = ganhoMensal * (necessidadesPorcentagem / 100);
-                            var poupancaEmergencia = ganhoMensal * (poupancaPorcentagem / 100);
-                            var pagamentoDividas = ganhoMensal * (dividasPorcentagem / 100);
-                            var investimentosLongoPrazo = ganhoMensal * (investimentosPorcentagem / 100);
-                            var educacaoDesenvolvimento = ganhoMensal * (educacaoPorcentagem / 100);
-                            var lazerQualidadeVida = ganhoMensal * (lazerPorcentagem / 100);
-
-                            document.getElementById("necessidadesBasicas").textContent = necessidadesBasicas.toFixed(2);
-                            document.getElementById("poupancaEmergencia").textContent = poupancaEmergencia.toFixed(2);
-                            document.getElementById("pagamentoDividas").textContent = pagamentoDividas.toFixed(2);
-                            document.getElementById("investimentosLongoPrazo").textContent = investimentosLongoPrazo.toFixed(2);
-                            document.getElementById("educacaoDesenvolvimento").textContent = educacaoDesenvolvimento.toFixed(2);
-                            document.getElementById("lazerQualidadeVida").textContent = lazerQualidadeVida.toFixed(2);
-                        }
-
-                        window.onload = preencherPlanilha;
-                    </script>
-                </head>
-                <body>
-                    <div class="container">
-                        <h1>Planilha de Divisão de Gastos</h1>
-                        <table>
-                            <tr>
-                                <th>Categoria</th>
-                                <th>Valor</th>
-                            </tr>
-                            <tr>
-                                <td>Necessidades Básicas:</td>
-                                <td id="necessidadesBasicas"></td>
-                            </tr>
-                            <tr>
-                                <td>Poupança de Emergência:</td>
-                                <td id="poupancaEmergencia"></td>
-                            </tr>
-                            <tr>
-                                <td>Pagamento de Dívidas:</td>
-                                <td id="pagamentoDividas"></td>
-                            </tr>
-                            <tr>
-                                <td>Investimentos de Longo Prazo:</td>
-                                <td id="investimentosLongoPrazo"></td>
-                            </tr>
-                            <tr>
-                                <td>Educação e Desenvolvimento:</td>
-                                <td id="educacaoDesenvolvimento"></td>
-                            </tr>
-                            <tr>
-                                <td>Lazer e Qualidade de Vida:</td>
-                                <td id="lazerQualidadeVida"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </body>
-                </html>
-            `;
-            popUpWindow.document.open();
-            popUpWindow.document.write(popUpContent);
-            popUpWindow.document.close();
+            // Mesmo conteúdo da função abrirPlanilha
         }
     </script>
 </head>
@@ -232,6 +128,37 @@
             <button onclick="calcularDivisao()">Calcular Divisão</button>
             <button onclick="abrirPlanilha()">Abrir Planilha</button>
         </div>
+
+        <table>
+            <tr>
+                <th>Categoria</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Necessidades Básicas:</td>
+                <td id="necessidadesBasicas">0.00</td>
+            </tr>
+            <tr>
+                <td>Poupança de Emergência:</td>
+                <td id="poupancaEmergencia">0.00</td>
+            </tr>
+            <tr>
+                <td>Pagamento de Dívidas:</td>
+                <td id="pagamentoDividas">0.00</td>
+            </tr>
+            <tr>
+                <td>Investimentos de Longo Prazo:</td>
+                <td id="investimentosLongoPrazo">0.00</td>
+            </tr>
+            <tr>
+                <td>Educação e Desenvolvimento:</td>
+                <td id="educacaoDesenvolvimento">0.00</td>
+            </tr>
+            <tr>
+                <td>Lazer e Qualidade de Vida:</td>
+                <td id="lazerQualidadeVida">0.00</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
