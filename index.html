@@ -29,12 +29,14 @@ header {
 header .site-title img {
   vertical-align: middle;
   margin-right: 10px;
+  width: 80px; /* Aumenta o tamanho da logo */
+  height: 80px; /* Aumenta o tamanho da logo */
 }
 
 header .site-title h1 {
   color: #fff; /* Cor branca */
   margin: 0;
-  font-size: 28px; /* Tamanho da fonte aumentado */
+  font-size: 36px; /* Tamanho da fonte aumentado */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
   display: inline-block;
   /* Animação do título do site */
@@ -134,6 +136,11 @@ footer p {
     font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
   }
 
+  header .site-title img {
+    width: 60px; /* Reduz o tamanho da logo para telas menores */
+    height: 60px; /* Reduz o tamanho da logo para telas menores */
+  }
+
   nav ul li {
     margin-right: 10px; /* Reduzir o espaçamento entre os itens de navegação */
   }
@@ -161,6 +168,11 @@ footer p {
     font-size: 20px; /* Reduzir ainda mais o tamanho da fonte para telas pequenas */
   }
 
+  header .site-title img {
+    width: 50px; /* Reduz ainda mais o tamanho da logo para telas pequenas */
+    height: 50px; /* Reduz ainda mais o tamanho da logo para telas pequenas */
+  }
+
   nav ul li {
     margin-right: 5px; /* Reduzir ainda mais o espaçamento entre os itens de navegação */
   }
@@ -172,31 +184,8 @@ footer p {
 
   .spending-topic {
     margin-top: 15px; /* Reduzir ainda mais o espaçamento entre os tópicos */
-    padding: 10px; /* Reduzir ainda mais o preenchimento das caixas de tópicos */
-  }
+    padding: 10px; /* Reduzir
 
-  .spending-topic h2 {
-    font-size: 20px; /* Reduzir ainda mais o tamanho da fonte dos títulos */
-  }
-
-  /* Mais ajustes conforme necessário para dispositivos móveis menores */
-}
-
-/* Animação do título do site */
-@keyframes bounceIn {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-header .site-title h1 {
-  animation: bounceIn 1s;
-
-  
 </style>
 
 
