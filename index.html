@@ -130,36 +130,41 @@ footer p {
 }
 
 /* Media Queries para responsividade */
-@media screen and (max-width: 768px) {
-  /* Estilos para dispositivos com largura máxima de 768px (tablets e smartphones em modo paisagem) */
+@media screen and (max-width: 720px) {
+  /* Estilos para dispositivos com largura máxima de 720px (exemplo: Samsung Galaxy A11) */
+
   header .site-title h1 {
     font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
   }
 
   header .site-title img {
-    width: 200px; /* Reduz o tamanho da logo para telas menores */
-    height: 200px; /* Reduz o tamanho da logo para telas menores */
+    width: 50px; /* Reduz ainda mais o tamanho da logo para telas menores */
+    height: 50px; /* Reduz ainda mais o tamanho da logo para telas menores */
   }
 
   nav ul li {
-    margin-right: 10px; /* Reduzir o espaçamento entre os itens de navegação */
+    margin-right: 5px; /* Reduzir ainda mais o espaçamento entre os itens de navegação */
   }
 
   nav ul li a {
-    font-size: 16px; /* Reduzir o tamanho da fonte dos links */
-    padding: 3px 8px; /* Reduzir o preenchimento dos links */
+    font-size: 14px; /* Reduzir ainda mais o tamanho da fonte dos links */
+    padding: 2px 6px; /* Reduzir ainda mais o preenchimento dos links */
   }
 
   .spending-topic {
-    margin-top: 20px; /* Reduzir o espaçamento entre os tópicos */
+    margin-top: 15px; /* Reduzir ainda mais o espaçamento entre os tópicos */
     padding: 15px; /* Reduzir o preenchimento das caixas de tópicos */
   }
 
   .spending-topic h2 {
-    font-size: 24px; /* Reduzir o tamanho da fonte dos títulos */
+    font-size: 20px; /* Reduzir ainda mais o tamanho da fonte dos títulos para telas pequenas */
   }
 
-  /* Mais ajustes conforme necessário para acomodar melhor os dispositivos móveis */
+  .spending-topic p {
+    font-size: 14px; /* Reduzir o tamanho da fonte dos parágrafos para telas pequenas */
+  }
+
+  /* Mais ajustes conforme necessário para dispositivos móveis em modo retrato */
 }
 
 @media screen and (max-width: 480px) {
