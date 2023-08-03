@@ -8,7 +8,121 @@
  
 <style>
 /* General CSS styles for the layout */
-/* ... (previously provided styles) ... */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+header .site-title img {
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+header .site-title h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #444;
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.spending-topic {
+  margin: 20px 0;
+  padding: 30px;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s;
+}
+
+.spending-topic h2 {
+  color: #fff;
+  font-size: 28px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
+.spending-topic p {
+  line-height: 1.8;
+}
+
+/* Custom Styles */
+#income-form label,
+#result h3,
+#result ul {
+  color: #fff;
+}
+
+/* Styles for links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the footer */
+footer {
+  background-color: #111;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1024px) {
