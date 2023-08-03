@@ -309,6 +309,21 @@ footer p {
         <li>Hobbies e entretenimento</li>
       </ul>
     </section>
+<section id="savings-calculator" class="spending-topic">
+  <h2>Calculadora de Economia Mensal</h2>
+  <label for="monthly-income">Renda Mensal:</label>
+  <input type="number" id="monthly-income" placeholder="Insira sua renda mensal">
+  
+  <label for="monthly-expenses">Despesas Mensais:</label>
+  <input type="number" id="monthly-expenses" placeholder="Insira suas despesas mensais">
+  
+  <button onclick="calculateSavings()">Calcular</button>
+  
+  <div id="savings-result">
+    <h3>Economia Mensal:</h3>
+    <p id="monthly-savings">R$ 0.00</p>
+  </div>
+</section>
 
     <section id="tips-to-save-money" class="spending-topic">
       <h2>Dicas para Economizar</h2>
@@ -328,7 +343,8 @@ footer p {
       <p>Lembre-se de que economizar dinheiro não significa privar-se de tudo. Trata-se de fazer escolhas conscientes e equilibradas para alcançar seus objetivos financeiros e desfrutar de uma vida financeiramente estável e satisfatória.</p>
     </section>
   </main>
-
+<script> function calculateSavings() { const monthlyIncome = parseFloat(document.getElementById('monthly-income').value); const monthlyExpenses = parseFloat(document.getElementById('monthly-expenses').value); if (isNaN(monthlyIncome) || isNaN(monthlyExpenses)) { document.getElementById('monthly-savings').innerText = 'Valores inválidos'; } else { const monthlySavings = monthlyIncome - monthlyExpenses; document.getElementById('monthly-savings').innerText = 'R$ ' + monthlySavings.toFixed(2); } } 
+</script>
   <footer>
     <h3>Quem somos?</h3>
     <p>O Economize + é uma plataforma dedicada a promover a consciência financeira e auxiliar as pessoas na gestão de suas finanças pessoais. Sua equipe busca fornecer informações, dicas e recursos práticos para ajudar os usuários a entender melhor suas finanças, tomar decisões informadas e alcançar suas metas financeiras.</p>
