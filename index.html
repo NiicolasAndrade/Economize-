@@ -7,7 +7,7 @@
   <title>Economize +</title>
  
 <style>
-/* Estilos CSS para o layout geral */
+/* General CSS styles for the layout */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -15,98 +15,91 @@ body {
   color: #fff;
   background-color: #000;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
 }
 
 header {
-  background-color: #000; /* Cor de fundo mais escura */
-  padding: 10px 20px;
+  background-color: #000;
+  padding: 20px;
   text-align: center;
 }
 
 header .site-title img {
   vertical-align: middle;
   margin-right: 10px;
-  width: 80px; /* Aumenta o tamanho da logo */
-  height: 80px; /* Aumenta o tamanho da logo */
+  width: 80px;
+  height: 80px;
 }
 
 header .site-title h1 {
-  color: #fff; /* Cor branca */
+  color: #fff;
   margin: 0;
-  font-size: 36px; /* Tamanho da fonte aumentado */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
-  display: inline-block;
-  /* Animação do título do site */
-  animation: bounceIn 1s;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #444; /* Cor de fundo para a navegação */
+  background-color: #444;
   text-align: center;
   margin-top: 10px;
 }
 
 nav ul li {
   display: inline;
-  margin-right: 15px; /* Espaçamento maior entre os itens de navegação */
+  margin-right: 15px;
 }
 
 nav ul li a {
-  color: #fff; /* Cor branca */
+  color: #fff;
   text-decoration: none;
-  font-size: 18px; /* Tamanho da fonte aumentado */
+  font-size: 18px;
   padding: 5px 10px;
-  border-radius: 5px; /* Cantos arredondados nos links */
-  transition: background-color 0.3s ease; /* Transição suave na cor de fundo ao passar o mouse */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #555; /* Cor de fundo escura ao passar o mouse */
+  background-color: #555;
 }
 
 main {
   width: 100%;
-  max-width: 1200px; /* Largura máxima para o conteúdo centralizado */
-  padding: 0 15px; /* Adiciona espaço nas laterais */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .spending-topic {
-  margin-top: 30px; /* Espaçamento maior entre os tópicos */
-  padding: 20px;
-  background-color: #222; /* Cor de fundo all black */
-  border: 1px solid #444; /* Adiciona uma borda suave */
-  border-radius: 10px; /* Cantos arredondados maiores */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra na caixa */
-  /* Animação de fade-in nas seções */
+  margin: 20px 0;
+  padding: 30px;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1s;
 }
 
 .spending-topic h2 {
-  color: #fff; /* Cor branca */
-  margin-top: 0;
-  font-size: 28px; /* Tamanho da fonte aumentado */
-  border-bottom: 2px solid #fff; /* Linha de borda na parte inferior dos títulos */
-  padding-bottom: 10px; /* Espaçamento inferior para o título */
+  color: #fff;
+  font-size: 28px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
 }
 
 .spending-topic p {
-  line-height: 1.8; /* Espaçamento entre linhas maior */
+  line-height: 1.8;
 }
 
-/* Estilos personalizados */
+/* Custom Styles */
 #income-form label,
 #result h3,
 #result ul {
-  color: #fff; /* Cor branca */
+  color: #fff;
 }
 
-/* Estilos para links */
+/* Styles for links */
 a {
   color: #007bff;
   text-decoration: none;
@@ -116,95 +109,83 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Estilos para o rodapé */
+/* Styles for the footer */
 footer {
   background-color: #111;
   padding: 20px;
   color: #fff;
   text-align: center;
-  margin-top: 30px; /* Espaçamento maior entre o conteúdo e o rodapé */
+  margin-top: 30px;
 }
 
 footer p {
-  margin: 10px 0; /* Espaçamento maior entre os parágrafos do rodapé */
+  margin: 10px 0;
 }
 
-/* Media Queries para responsividade */
+/* Media Queries for responsiveness */
 @media screen and (max-width: 720px) {
-  /* Estilos para dispositivos com largura máxima de 720px (exemplo: Samsung Galaxy A11) */
-
   header .site-title h1 {
-    font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
+    font-size: 24px;
   }
 
   header .site-title img {
-    width: 50px; /* Reduz ainda mais o tamanho da logo para telas menores */
-    height: 50px; /* Reduz ainda mais o tamanho da logo para telas menores */
+    width: 50px;
+    height: 50px;
   }
 
   nav ul li {
-    margin-right: 5px; /* Reduzir ainda mais o espaçamento entre os itens de navegação */
+    margin-right: 5px;
   }
 
   nav ul li a {
-    font-size: 14px; /* Reduzir ainda mais o tamanho da fonte dos links */
-    padding: 2px 6px; /* Reduzir ainda mais o preenchimento dos links */
+    font-size: 14px;
+    padding: 2px 6px;
   }
 
   .spending-topic {
-    margin-top: 15px; /* Reduzir ainda mais o espaçamento entre os tópicos */
-    padding: 15px; /* Reduzir o preenchimento das caixas de tópicos */
+    margin: 15px 0;
+    padding: 15px;
   }
 
   .spending-topic h2 {
-    font-size: 20px; /* Reduzir ainda mais o tamanho da fonte dos títulos para telas pequenas */
+    font-size: 20px;
   }
 
   .spending-topic p {
-    font-size: 14px; /* Reduzir o tamanho da fonte dos parágrafos para telas pequenas */
+    font-size: 14px;
   }
-
-  /* Mais ajustes conforme necessário para dispositivos móveis em modo retrato */
 }
 
 @media screen and (max-width: 480px) {
-  /* Estilos para dispositivos com largura máxima de 480px (smartphones em modo retrato) */
   header .site-title h1 {
-    font-size: 20px; /* Reduzir ainda mais o tamanho da fonte para telas pequenas */
+    font-size: 20px;
   }
 
   header .site-title img {
-    width: 50px; /* Reduz ainda mais o tamanho da logo para telas pequenas */
-    height: 50px; /* Reduz ainda mais o tamanho da logo para telas pequenas */
+    width: 50px;
+    height: 50px;
   }
 
   nav ul li {
-    margin-right: 5px; /* Reduzir ainda mais o espaçamento entre os itens de navegação */
+    margin-right: 5px;
   }
 
   nav ul li a {
-    font-size: 14px; /* Reduzir ainda mais o tamanho da fonte dos links */
-    padding: 2px 6px; /* Reduzir ainda mais o preenchimento dos links */
+    font-size: 14px;
+    padding: 2px 6px;
   }
 
   .spending-topic {
-    margin-top: 15px; /* Reduzir ainda mais o espaçamento entre os tópicos */
+    margin: 15px 0;
   }
-  /* Estilos para dispositivos com largura máxima de 480px (smartphones em modo retrato) */
+
   .spending-topic h2 {
-    font-size: 20px; /* Reduzir ainda mais o tamanho da fonte dos títulos para telas pequenas */
+    font-size: 20px;
   }
 
   .spending-topic p {
-    font-size: 14px; /* Reduzir o tamanho da fonte dos parágrafos para telas pequenas */
+    font-size: 14px;
   }
-
-  /* Ajustes para centralizar as seções */
-  .spending-topic {
-    width: 100%; /* Definir a largura da seção como 100% para preencher toda a largura disponível */
-  }
-
-  /* Mais ajustes conforme necessário para dispositivos móveis em modo retrato */
 }
 
 
