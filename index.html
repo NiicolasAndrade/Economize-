@@ -7,234 +7,120 @@
   <title>Economize +</title>
  
 <style>
-/* General CSS styles for the layout */
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #fff;
-  background-color: #000;
+  color: #222;
+  background-color: #f2f2f2;
   line-height: 1.6;
 }
 
-header {
-  background-color: #000;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+header {
   text-align: center;
-}
-
-header .site-title img {
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 80px;
-  height: 80px;
-}
-
-header .site-title h1 {
+  padding: 20px;
+  background-color: #007bff;
   color: #fff;
-  margin: 0;
-  font-size: 36px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #444;
   text-align: center;
-  margin-top: 10px;
+  background-color: #007bff;
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin-right: 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #0056b3;
 }
 
 main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
 }
 
-.spending-topic {
-  margin: 20px 0;
-  padding: 30px;
-  background-color: #222;
-  border: 1px solid #444;
+section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   animation: fadeIn 1s;
 }
 
-.spending-topic h2 {
-  color: #fff;
-  font-size: 28px;
-  border-bottom: 2px solid #fff;
+section h2 {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
   padding-bottom: 10px;
 }
 
-.spending-topic p {
+section p {
   line-height: 1.8;
 }
 
-/* Custom Styles */
-#income-form label,
-#result h3,
-#result ul {
-  color: #fff;
-}
-
-/* Styles for links */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Styles for the footer */
 footer {
-  background-color: #111;
-  padding: 20px;
+  background-color: #007bff;
   color: #fff;
   text-align: center;
+  padding: 20px;
   margin-top: 30px;
 }
 
-footer p {
-  margin: 10px 0;
-}
-
-
-
-/* Media Queries for responsiveness */
-@media screen and (max-width: 1024px) {
-  /* Styles for tablets */
-  header .site-title h1 {
-    font-size: 28px;
-  }
-
-  header .site-title img {
-    width: 60px;
-    height: 60px;
-  }
-
-  nav ul li {
-    margin-right: 10px;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-    padding: 5px 8px;
-  }
-
-  .spending-topic {
-    margin: 15px 0;
-    padding: 20px;
-  }
-
-  .spending-topic h2 {
-    font-size: 24px;
-  }
-
-  .spending-topic p {
-    font-size: 16px;
-  }
-}
-
+/* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
-  /* Styles for smaller tablets and landscape mobile devices */
-  header .site-title h1 {
-    font-size: 24px;
-  }
-
-  header .site-title img {
-    width: 50px;
-    height: 50px;
-  }
-
   nav ul li {
     margin-right: 5px;
   }
 
   nav ul li a {
-    font-size: 14px;
-    padding: 4px 6px;
+    padding: 5px;
   }
 
-  .spending-topic {
-    margin: 10px 0;
+  section {
+    margin: 20px 0;
     padding: 15px;
   }
 
-  .spending-topic h2 {
-    font-size: 22px;
+  section h2 {
+    font-size: 24px;
   }
 
-  .spending-topic p {
+  section p {
     font-size: 14px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  /* Styles for mobile devices */
-  header .site-title h1 {
-    font-size: 20px;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  header .site-title img {
-    width: 40px;
-    height: 40px;
-  }
-
-  nav ul li {
-    margin-right: 3px;
-  }
-
-  nav ul li a {
-    font-size: 12px;
-    padding: 3px 5px;
-  }
-
-  .spending-topic {
-    margin: 5px 0;
-    padding: 10px;
-  }
-
-  .spending-topic h2 {
-    font-size: 18px;
-  }
-
-  .spending-topic p {
-    font-size: 12px;
-  }
-
-  footer h3 {
-    font-size: 16px;
-  }
-
-  footer p {
-    font-size: 12px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
 
 
 </style>
