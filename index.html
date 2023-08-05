@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=4.0">
+  <meta name="viewport" content="width=device-width">
   <title>Economize +</title>
  
-<style>
-/* Global Styles */
+
+  <style>
+ /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", serif;
   margin: 0;
   padding: 0;
-  color: #222;
-  background-color: #f2f2f2;
-  line-height: 1.6;
+  color: #0e0b16;
+  background-color: #E7DFDD;
+  line-height: 1.4;
 }
 
 .container {
@@ -26,8 +27,19 @@ body {
 header {
   text-align: center;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  color: #0e0b16;
+  background-color: #E7DFDD;
+  border-bottom: 2px solid #0e0b16; /* Borda inferior de 2px na cor #0e0b16 */
+  position: fixed; /* Define o cabeçalho como fixo */
+  top: 0; /* Fixa o cabeçalho no topo da tela */
+  left: 0;
+  width: 100%; /* O cabeçalho ocupará toda a largura da tela */
+  border-radius: 0px;
+  transition: top 0.3s ease; /* Reduzindo o tempo de transição para 0.3 segundos */
+}
+
+header.hidden {
+  top: -70px; /* Altura do cabeçalho (definida como 60px) mais o valor do padding (10px) */
 }
 
 nav ul {
@@ -35,119 +47,144 @@ nav ul {
   padding: 0;
   margin: 0;
   text-align: center;
-  background-color: #007bff;
+  background-color: #E7DFDD;
 }
 
-nav ul li {
-  display: inline-block;
-  margin-right: 15px;
+ nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+ }
+
+ nav ul li a {
+    color: #1D1A24;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+ }
+
+ nav ul li a:hover {
+    background-color: #00000085;
+ }
+
+ main {
+    padding: 20px;
+    
+ }
+
+ section {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #F2EBEB;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #0e0b16;
+    animation: fadeIn 1s;
+    font-size: 19px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+    hyphens: auto;
+ }
+.site-title h1 {
+color:#0B080F;
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
+ section h2 {
+    color: #1D1A24;
+    border-bottom: 2px solid #1D1A24;
+    padding-bottom: 10px;
+ }
 
-nav ul li a:hover {
-  background-color: #0056b3;
-}
+ section p, p2 {
+    line-height: 1.7;
+ }
 
-main {
-  padding: 20px;
-}
+ footer {
+    background-color: #E7DFDD;
+    color: #0B080F;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 16px;
+    
+    border-radius: 30px;
+ }
 
-section {
-  margin: 20px 0;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 3s;
-}
+ /* Media Queries for Responsiveness */
+ @media screen and (max-width: 768px) {
+    nav ul li {
+        margin-right: 5px;
+    }
 
-section h2 {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 20px;
-}
+    nav ul li a {
+        padding: 5px;
+    }
 
-section p {
-  line-height: 1.7;
-}
+    section {
+        margin: 20px 0;
+        padding: 25px;
+    }
 
-footer {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
+    section h2 {
+        font-size: 24px;
+    }
 
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
-  nav ul li {
-    margin-right: 5px;
-  }
+    section p {
+        font-size: 14px;
+    }
+ }
 
-  nav ul li a {
-    padding: 5px;
-  }
-
-  section {
-    margin: 20px 0;
-    padding: 25px;
-  }
-
-  section h2 {
-    font-size: 24px;
-  }
-
-  section p {
-    font-size: 14px;
-  }
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
+ /* Animations */
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }
+ @keyframes fadeOutHeader {
+  0% {
     opacity: 1;
-    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
   }
 }
-
-
-</style>
-
-
-
+ </style>
 </head>
 
 <body>
-  <header>
+  <header id="site-header">
+
     <div class="site-title">
-      <img src="LOGO TA.jpeg" alt="" width="60" height="60">  
+      <img src="LOGO TA.jpeg" alt="" width="80" height="80">
+       
       <h1>Economize +</h1>
     </div>
     <nav>
          <ul>
-      <li><a href="#financial-awareness">O que é consciência financeira?</a></li>
-      <li><a href="#importance">A Importância da Divisão Adequada do Dinheiro</a></li>
-      <li><a href="#expense-allocation">Planejamento Financeiro Pessoal</a></li>
-      <li><a href="#tips-to-save-money">Dicas para Economizar</a></li> <!-- Adicionando o link para a seção "Dicas para Economizar" -->
-      <li><a href="Pagina 2.html">Calcule seus gastos</a></li>
+      <li><a href="#financial-awareness"><strong>O que é consciência financeira?</strong></a></li>
+      <li><a href="#importance"><strong>Importância da Divisão Adequada do Dinheiro</strong></a></li>
+      <li><a href="#expense-allocation"><strong>Planejamento Financeiro Pessoal</strong></a></li>
+      <li><a href="#tips-to-save-money"><strong>Dicas para Economizar</strong></a></li> <!-- Adicionando o link para a seção "Dicas para Economizar" -->
+      <li><a href="Pagina 2.html"><strong>Calcule seus gastos</strong></a></li>
     </ul>
     </nav>
   </header>
 
 
   <main>
+    <P>.</P>
+    <P>.</P>
+    <P>.</P>
+    <P>.</P>
+    <P>.</P>
+    <P>.</P>
     <section id="financial-awareness" class="spending-topic">
       <h2>O que é consciência financeira?</h2>
       <p>A consciência financeira refere-se à capacidade de compreender, gerenciar e tomar decisões informadas sobre as finanças pessoais. Envolve uma compreensão clara dos princípios básicos de economia, orçamento, poupança, investimento, endividamento, consumo consciente e planejamento financeiro a longo prazo. Ter consciência financeira significa estar ciente das suas finanças, saber como elas funcionam e tomar decisões conscientes e responsáveis em relação ao dinheiro.</p>
@@ -216,28 +253,13 @@ footer {
         <li>Desenvolvimento de habilidades</li>
       </ul>
 
-      <h3>Lazer e Qualidade de Vida (10%):</h3>
+      <h3>Lazer e Qualidade de Vida (15%):</h3>
       <ul>
         <li>Viagens</li>
         <li>Atividades recreativas</li>
         <li>Hobbies e entretenimento</li>
       </ul>
     </section>
-<section id="savings-calculator" class="spending-topic">
-  <h2>Calculadora de Economia Mensal</h2>
-  <label for="monthly-income">Renda Mensal:</label>
-  <input type="number" id="monthly-income" placeholder="Insira sua renda mensal">
-  
-  <label for="monthly-expenses">Despesas Mensais:</label>
-  <input type="number" id="monthly-expenses" placeholder="Insira suas despesas mensais">
-  
-  <button onclick="calculateSavings()">Calcular</button>
-  
-  <div id="savings-result">
-    <h3>Economia Mensal:</h3>
-    <p id="monthly-savings">R$ 0.00</p>
-  </div>
-</section>
 
     <section id="tips-to-save-money" class="spending-topic">
       <h2>Dicas para Economizar</h2>
@@ -257,12 +279,31 @@ footer {
       <p>Lembre-se de que economizar dinheiro não significa privar-se de tudo. Trata-se de fazer escolhas conscientes e equilibradas para alcançar seus objetivos financeiros e desfrutar de uma vida financeiramente estável e satisfatória.</p>
     </section>
   </main>
-<script> function calculateSavings() { const monthlyIncome = parseFloat(document.getElementById('monthly-income').value); const monthlyExpenses = parseFloat(document.getElementById('monthly-expenses').value); if (isNaN(monthlyIncome) || isNaN(monthlyExpenses)) { document.getElementById('monthly-savings').innerText = 'Valores inválidos'; } else { const monthlySavings = monthlyIncome - monthlyExpenses; document.getElementById('monthly-savings').innerText = 'R$ ' + monthlySavings.toFixed(2); } } 
-</script>
+  <script>
+   var prevScrollpos = window.pageYOffset;
+var header = document.getElementById("site-header");
+var headerHeight = 243; // Altura em pixels que o cabeçalho sairá da tela
+
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+
+  // Verifica a direção do scroll e atualiza a posição do cabeçalho
+  if (prevScrollpos > currentScrollPos) {
+    // Se rolou para cima, mostra o cabeçalho
+    header.style.top = "0";
+  } else {
+    // Se rolou para baixo, esconde o cabeçalho pela altura definida
+    header.style.top = "-" + headerHeight + "px";
+  }
+
+  prevScrollpos = currentScrollPos;
+};
+
+  </script>
   <footer>
     <h3>Quem somos?</h3>
-    <p>O Economize + é uma plataforma dedicada a promover a consciência financeira e auxiliar as pessoas na gestão de suas finanças pessoais. Sua equipe busca fornecer informações, dicas e recursos práticos para ajudar os usuários a entender melhor suas finanças, tomar decisões informadas e alcançar suas metas financeiras.</p>
-    <p>© Economize + 2023. Todos os direitos reservados.</p>
+    <p><strong>O Economize + é uma plataforma dedicada a promover a consciência financeira e auxiliar as pessoas na gestão de suas finanças pessoais. Sua equipe busca fornecer informações, dicas e recursos práticos para ajudar os usuários a entender melhor suas finanças, tomar decisões informadas e alcançar suas metas financeiras.</strong></p>
+    <p><strong>© Economize + 2023. Todos os direitos reservados.</strong></p>
   </footer>
 </body>
 </html>
